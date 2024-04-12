@@ -58,9 +58,13 @@ let getRecipe = async (dish) => {
 
             // append all dabas in container
             container.appendChild(div);
+
+            // placing food type at end
+            document.querySelector(".food-type").style.position = "relative";
         }
     } catch(error) {
-        headingH2.innerText = "Error in fetching recipes";
+        headingH2.innerText = "Error in fetching recipes !!!";
+        document.querySelector(".food-type").style.position = "fixed";
     }
 }
 

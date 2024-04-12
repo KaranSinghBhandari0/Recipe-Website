@@ -6,6 +6,7 @@
 
 body {
     background-color: rgb(109, 71, 189);
+    /* background-color: red; */
 }
 
 /* Navbar */
@@ -119,7 +120,57 @@ h2 {
 
 .fa-xmark {
     padding-left: 97%;
-    font-size: 2.5vw;
+    font-size: 3vw;
     color: red;
     cursor: pointer;
+}
+
+
+/* veg nonVeg and vegan section */
+.food-type {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    margin-top: 15px;
+}
+.food-type div{
+    text-align: center;
+    margin-right: 20px;
+}
+
+.food-type div div{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-size: cover;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.veg div{
+    background-image: url("veg.webp");
+}
+.non-veg div{
+    background-image: url("non-veg.jpg");
+}
+.vegan div{
+    background-image: url("vegan.jpg");
+}
+
+@media (max-width: 480px) {
+    .food-type div div{
+        height: 80px;
+        width: 80px;
+    }
+}
+@media (max-width: 350px) {
+    .food-type div div{
+        height: 70px;
+        width: 70px;
+    }
 }
