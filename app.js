@@ -59,12 +59,12 @@ let getRecipe = async (dish) => {
             // append all dabas in container
             container.appendChild(div);
 
-            // placing food type at end
-            document.querySelector(".food-type").style.position = "relative";
+            // choice div ko gayab kardo
+            document.querySelector(".choice-div").style.display = "none";
         }
     } catch(error) {
         headingH2.innerText = "Error in fetching recipes !!!";
-        document.querySelector(".food-type").style.position = "fixed";
+        document.querySelector(".choice-div").style.display = "flex";
     }
 }
 

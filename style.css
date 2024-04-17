@@ -125,52 +125,44 @@ h2 {
     cursor: pointer;
 }
 
+/* choice section */
 
-/* veg nonVeg and vegan section */
-.food-type {
-    background-color: #fff;
-    width: 100%;
+.choice-div {
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    padding: 10px;
-    margin-top: 15px;
-}
-.food-type div{
-    text-align: center;
-    margin-right: 20px;
+    margin: 30px auto;
 }
 
-.food-type div div{
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: 2px solid black;
-    background-size: cover;
+.choice-box {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin-right: 30px;
     cursor: pointer;
+    text-align: center;
+}
+
+.choice-box div{
+    height: 12vmin;
+    width: 12vmin;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-size: cover;
     margin: 0 auto;
 }
-.veg div{
+
+#veg {
     background-image: url("veg.webp");
 }
-.non-veg div{
+#non-veg {
     background-image: url("non-veg.jpg");
 }
-.vegan div{
+#vegan {
     background-image: url("vegan.jpg");
 }
 
-@media (max-width: 480px) {
-    .food-type div div{
-        height: 80px;
-        width: 80px;
-    }
-}
-@media (max-width: 350px) {
-    .food-type div div{
-        height: 70px;
-        width: 70px;
-    }
+.choice-box:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+    font-size: 18px;
 }
