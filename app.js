@@ -58,13 +58,9 @@ let getRecipe = async (dish) => {
 
             // append all dabas in container
             container.appendChild(div);
-
-            // choice div ko gayab kardo
-            document.querySelector(".choice-div").style.display = "none";
         }
     } catch(error) {
         headingH2.innerText = "Error in fetching recipes !!!";
-        document.querySelector(".choice-div").style.display = "flex";
     }
 }
 
@@ -74,7 +70,8 @@ searchBtn.addEventListener("click",(e)=> {
     popupDIV.style.display = "none";
     let dish = input.value.trim();      // to remove spaces
     if(dish == "") {
-        headingH2.innerText = "Please enter a dish...";
+        container.innerHTML = "";
+        alert("Please Enter a dish name");
     } else {
         getRecipe(dish);
     }
